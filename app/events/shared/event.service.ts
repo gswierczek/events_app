@@ -8,9 +8,7 @@ export class EventService {
     }
 
     getEvent(id: number) {
-        let subject = new Subject;
-        setTimeout(() => {subject.next(EVENTS); subject.complete();}, 2000);
-        return subject
+        return EVENTS.find(event => event.id === id)
     }
 }
     const EVENTS = [
