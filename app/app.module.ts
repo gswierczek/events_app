@@ -17,16 +17,20 @@ import {
     EventListResolver
 } from './events/index'
 import {AuthService} from './user/auth.service';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {CreateSessionComponent} from './events/event-details/create-session.component';
 
 
 @NgModule({
     imports: [
         BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
         RouterModule.forRoot(appRoutes)
     ],
     declarations: [
         EventsAppComponent, EventsListComponent, EventThumbnailComponent, NavBarComponent, EventDetailsComponent,
-        CreateEventComponent, Error404Component
+        CreateEventComponent, Error404Component, CreateSessionComponent
     ],
     bootstrap: [EventsAppComponent],
     providers: [
