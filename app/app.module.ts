@@ -24,6 +24,7 @@ import {SessionListComponent} from './events/event-details/session-list.componen
 import {CollapsibleWellComponent} from './common/collapsible-well.component';
 import {JQ_TOKEN} from './common/index';
 import {SimpleModalComponent} from './common/simple-modal.component';
+import {ModalTriggerDirective} from './common/modal-trigger.directive';
 
 declare let jQuery : Object;
 
@@ -37,7 +38,7 @@ declare let jQuery : Object;
     declarations: [
         EventsAppComponent, EventsListComponent, EventThumbnailComponent, NavBarComponent, EventDetailsComponent,
         CreateEventComponent, Error404Component, CreateSessionComponent, SessionListComponent, CollapsibleWellComponent, DurationPipe,
-        SimpleModalComponent
+        SimpleModalComponent, ModalTriggerDirective
     ],
     bootstrap: [EventsAppComponent],
     providers: [
