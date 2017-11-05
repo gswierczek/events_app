@@ -22,7 +22,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CreateSessionComponent} from './events/event-details/create-session.component';
 import {SessionListComponent} from './events/event-details/session-list.component';
 import {CollapsibleWellComponent} from './common/collapsible-well.component';
+import {JQ_TOKEN} from './common/index';
+import {SimpleModalComponent} from './common/simple-modal.component';
 
+declare let jQuery : Object;
 
 @NgModule({
     imports: [
@@ -33,7 +36,8 @@ import {CollapsibleWellComponent} from './common/collapsible-well.component';
     ],
     declarations: [
         EventsAppComponent, EventsListComponent, EventThumbnailComponent, NavBarComponent, EventDetailsComponent,
-        CreateEventComponent, Error404Component, CreateSessionComponent, SessionListComponent, CollapsibleWellComponent, DurationPipe
+        CreateEventComponent, Error404Component, CreateSessionComponent, SessionListComponent, CollapsibleWellComponent, DurationPipe,
+        SimpleModalComponent
     ],
     bootstrap: [EventsAppComponent],
     providers: [
@@ -42,7 +46,8 @@ import {CollapsibleWellComponent} from './common/collapsible-well.component';
         EventRouteActivator,
         { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState},
         EventListResolver,
-        AuthService
+        AuthService,
+        { provide: JQ_TOKEN, useValue: jQuery}
     ]
 })
 export class AppModule {
