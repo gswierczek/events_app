@@ -25,6 +25,7 @@ import {CollapsibleWellComponent} from './common/collapsible-well.component';
 import {JQ_TOKEN} from './common/index';
 import {SimpleModalComponent} from './common/simple-modal.component';
 import {ModalTriggerDirective} from './common/modal-trigger.directive';
+import {UpvoteComponent} from './events/event-details/upvote.component';
 
 declare let jQuery : Object;
 
@@ -38,7 +39,7 @@ declare let jQuery : Object;
     declarations: [
         EventsAppComponent, EventsListComponent, EventThumbnailComponent, NavBarComponent, EventDetailsComponent,
         CreateEventComponent, Error404Component, CreateSessionComponent, SessionListComponent, CollapsibleWellComponent, DurationPipe,
-        SimpleModalComponent, ModalTriggerDirective
+        SimpleModalComponent, ModalTriggerDirective, UpvoteComponent
     ],
     bootstrap: [EventsAppComponent],
     providers: [
