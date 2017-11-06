@@ -27,6 +27,7 @@ import {SimpleModalComponent} from './common/simple-modal.component';
 import {ModalTriggerDirective} from './common/modal-trigger.directive';
 import {UpvoteComponent} from './events/event-details/upvote.component';
 import {VoterService} from './events/event-details/voter.service';
+import {LocationValidator} from './events/location-validator.directive';
 
 declare let jQuery : Object;
 
@@ -40,7 +41,7 @@ declare let jQuery : Object;
     declarations: [
         EventsAppComponent, EventsListComponent, EventThumbnailComponent, NavBarComponent, EventDetailsComponent,
         CreateEventComponent, Error404Component, CreateSessionComponent, SessionListComponent, CollapsibleWellComponent, DurationPipe,
-        SimpleModalComponent, ModalTriggerDirective, UpvoteComponent
+        SimpleModalComponent, ModalTriggerDirective, UpvoteComponent, LocationValidator
     ],
     bootstrap: [EventsAppComponent],
     providers: [

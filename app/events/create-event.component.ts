@@ -15,6 +15,7 @@ import {EventService} from './shared/event.service';
 })
 export class CreateEventComponent {
     isDirty: boolean = true;
+    event:any = { location: { } }
 
     constructor(private router: Router, private eventService: EventService) {
 
@@ -26,7 +27,7 @@ export class CreateEventComponent {
 
     saveEvent(formValues) {
         this.eventService.saveEvent(formValues);
+        this.router.navigate(['/events']);
         this.isDirty = false;
-        this.router.navigate(['/events'])
     }
 }
