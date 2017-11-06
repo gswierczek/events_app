@@ -7,8 +7,8 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
         <div class="votingWidgetContainer pointable" (click)="onClick()" >
             <div class="well votingWidget">
                 <div class="votingButton">
-                    <i *ngif="voted" class="glyphicon glyphicon-heart"></i>
-                    <i *ngif="!voted" class="glyphicon glyphicon-heart-empty"></i>
+                    <i *ngIf="voted" class="glyphicon glyphicon-heart"></i>
+                    <i *ngIf="!voted" class="glyphicon glyphicon-heart-empty"></i>
                 </div>
                 <div class="badge badge-inverse votingCount">
                     <div>{{count}}</div>
